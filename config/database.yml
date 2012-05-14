@@ -15,10 +15,10 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: env-var-heroku_development
+  database: env_dev
   pool: 5
-  username: env-var-heroku
-  password:
+  username: test
+  password: test
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -41,10 +41,10 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: env-var-heroku_test
+  database: env_test
   pool: 5
-  username: env-var-heroku
-  password:
+  username: test
+  password: test
 
 production:
   adapter: postgresql
