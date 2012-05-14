@@ -51,5 +51,5 @@ production:
   encoding: unicode
   database: env-var-heroku_production
   pool: 5
-  username: env-var-heroku
-  password:
+  username: <%= ENV['DB_USERNAME'] %>
+  password: <%= ENV['DB_PASSWORD'] %>
