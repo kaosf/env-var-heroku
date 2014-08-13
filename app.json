@@ -1,0 +1,6 @@
+{
+  "name": "env-var-heroku",
+  "description": "Environment variable usage example on Heroku",
+  "repository": "https://github.com/kaosf/heroku-env-var",
+  "keywords": ["rails", "env", "environment variable"]
+}
