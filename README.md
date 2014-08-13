@@ -19,6 +19,15 @@ heroku config:set MY_VAR=abcd
 heroku config:set MY_VAR2=efgh
 ```
 
+## Deploying to Heroku (your account)
+
+[![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+
+### References about Heroku Button
+
+* [Heroku | Introducing Heroku Button](https://blog.heroku.com/archives/2014/8/7/heroku-button)
+* [gongo/pizza-figlet](https://github.com/gongo/pizza-figlet)
+
 ## License
 
 [![Public Domain](http://i.creativecommons.org/p/mark/1.0/88x31.png)](http://creativecommons.org/publicdomain/mark/1.0/ "license")
