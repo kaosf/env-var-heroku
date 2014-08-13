@@ -15,6 +15,6 @@ ENV['VAR']
 ## 実行したコマンド
 
 ```Shell
-heroku config:add MY_VAR=abcd
-heroku config:add MY_VAR2=efgh
+heroku config:set MY_VAR=abcd
+heroku config:set MY_VAR2=efgh
 ```
