@@ -21,7 +21,7 @@ jobs:
       #   https://github.com/actions/setup-ruby/issues/64
       #   https://github.com/ruby/setup-ruby
       with:
-        ruby-version: 2.6.x
+        ruby-version: 2.6.6
     - name: Build and test with Rake
       run: |
         gem install bundler
