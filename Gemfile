@@ -43,12 +43,16 @@ gem 'bootsnap', '>= 1.1.0', require: false
 gem 'rails_12factor', '0.0.2'
 
 gem "net-smtp", require: false
+gem "net-imap", require: false
+gem "net-pop", require: false
 # To fix the following error on production:
 #
 # /app/vendor/bundle/ruby/3.1.0/gems/actionmailer-6.1.5/lib/action_mailer.rb:61:in `eager_load!': undefined method `eager_autoload!' for Mail:Module (NoMethodError)
 # app[web.1]:
 # app[web.1]: Mail.eager_autoload!
 # app[web.1]: ^^^^^^^^^^^^^^^^#
+#
+# ... `require': cannot load such file -- net/pop (LoadError)
 
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
