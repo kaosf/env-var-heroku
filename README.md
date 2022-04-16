@@ -2,7 +2,7 @@
 
 Rails で環境変数を参照する．Heroku 上にあっても
 
-```Ruby
+```
 ENV['VAR']
 ```
 
@@ -14,7 +14,7 @@ ENV['VAR']
 
 ## 実行したコマンド
 
-```Shell
+```
 heroku config:set MY_VAR=abcd
 heroku config:set MY_VAR2=efgh
 ```
@@ -27,6 +27,26 @@ heroku config:set MY_VAR2=efgh
 
 * [Heroku | Introducing Heroku Button](https://blog.heroku.com/archives/2014/8/7/heroku-button)
 * [gongo/pizza-figlet](https://github.com/gongo/pizza-figlet)
+
+## Run on local
+
+```
+bundle
+yarn
+bin/rails db:migrate
+```
+
+Keep running the following 2 commands:
+
+```
+MY_VAR=abcd MY_VAR2=efgh bin/rails s
+```
+
+```
+bin/webpack-dev-server
+```
+
+Access to [http://localhost:3000/](http://localhost:3000/).
 
 ## License
 
