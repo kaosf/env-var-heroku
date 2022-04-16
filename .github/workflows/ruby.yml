@@ -2,9 +2,9 @@ name: Ruby
 
 on:
   push:
-    branches: [ master ]
+    branches: [ main ]
   pull_request:
-    branches: [ master ]
+    branches: [ main ]
 
 jobs:
   test:
@@ -13,7 +13,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Ruby 2.6
+    - name: Set up Ruby
       #uses: actions/setup-ruby@v1
       uses: ruby/setup-ruby@v1
       # Use ruby/setup-ruby@v1 instead
@@ -21,7 +21,7 @@ jobs:
       #   https://github.com/actions/setup-ruby/issues/64
       #   https://github.com/ruby/setup-ruby
       with:
-        ruby-version: 2.6.6
+        ruby-version: 3.1.2
     - name: Build and test with Rake
       run: |
         gem install bundler
@@ -41,6 +41,6 @@ jobs:
       env:
         HEROKU_API_TOKEN: ${{ secrets.HEROKU_API_TOKEN }}
         HEROKU_APP_NAME: kaosf-env-var
-      if: github.ref == 'refs/heads/master' && job.status == 'success'
-      run: git push https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git origin/master:master
+      if: github.ref == 'refs/heads/main' && job.status == 'success'
+      run: git push https://heroku:$HEROKU_API_TOKEN@git.heroku.com/$HEROKU_APP_NAME.git origin/main:main
       # ref. https://dev.to/mscccc/github-actions-deploy-to-heroku-22np
